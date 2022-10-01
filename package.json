@@ -1,0 +1,40 @@
+{
+	"name": "ejs-language",
+	"displayName": "ejs-language",
+	"description": "ejs language support...?",
+	"version": "0.0.1",
+	"publisher": "YmSaki",
+	"engines": {
+		"vscode": "^1.71.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "ejs",
+				"aliases": [
+					"EJS",
+					"ejs"
+				],
+				"extensions": [
+					".ejs"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "ejs",
+				"scopeName": "source.ejs",
+				"path": "./syntaxes/ejs.tmLanguage.json",
+				"embeddedLanguages": {
+					"text.html": "html",
+					"source.css": "css",
+					"source.js": "javascript"
+				}
+			}
+		]
+	}
+}
